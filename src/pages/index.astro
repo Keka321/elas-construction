@@ -1,0 +1,96 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <section class="hero">
+    <div class="container">
+      <div class="h1-group">
+        <svg
+          width="160"
+          height="160"
+          viewBox="0 0 160 160"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_890_14871)">
+            <path
+              d="M79.8337 0C35.9252 0 0 35.9252 0 80.1663C0 124.407 35.9252 160 80.1663 160C124.407 160 160 124.075 160 80.1663C160 35.9252 124.075 0 79.8337 0ZM20.9563 91.8087C17.9626 88.815 17.9626 84.158 20.9563 81.4969L81.4969 20.6237C84.4906 17.9626 89.1476 18.2952 91.8087 21.289C94.1372 23.9501 94.1372 28.2744 91.8087 30.9356L31.2682 91.8087C28.2744 94.4699 23.6175 94.4699 20.9563 91.8087ZM44.5738 115.426C41.58 112.432 41.58 107.775 44.5738 105.114L105.114 44.5738C108.108 41.9127 112.765 42.2453 115.426 45.2391C117.755 47.9002 117.755 52.2245 115.426 54.8857L54.8857 115.426C52.2245 118.42 47.5676 118.42 44.5738 115.426ZM78.8358 139.376C76.1746 142.37 71.5177 142.703 68.5239 140.042C65.5301 137.38 65.1975 132.723 67.8586 129.73C68.1913 129.397 68.1913 129.397 68.5239 129.064L129.064 68.5239C132.058 65.8628 136.715 66.1954 139.376 69.1892C141.705 71.8503 141.705 76.1746 139.376 78.8358L78.8358 139.376Z"
+              fill="#4EB857"></path>
+          </g>
+          <defs>
+            <clipPath id="clip0_890_14871">
+              <rect width="160" height="160" fill="white"></rect>
+            </clipPath>
+          </defs>
+        </svg>
+
+        <h1>Website under construction</h1>
+      </div>
+    </div>
+  </section>
+  <section class="announcement">
+    <div class="container">
+      <h2>
+        We're excited to announce that Elas is evolving into three distinct
+        divisions. <br />
+         Get to know our dedicated directors leading the way!
+      </h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Nemanja</h3>
+        </div>
+        <div class="card">
+          <h3>Nemanja</h3>
+        </div>
+        <div class="card">
+          <h3>Nemanja</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <h2>Location:</h2>
+      <p>Ramićka</p>
+
+      <h2>Contact:</h2>
+      <p>Central: asdasd</p>
+    </div>
+  </footer>
+</Layout>
+
+<style>
+  .h1-group {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 600px;
+  }
+  .hero {
+    background-color: var(--gray);
+    background-image: url("header-pocetna.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 160px;
+    color: white;
+    min-height: 600px;
+  }
+  .announcement {
+    padding: 60px 0 60px 0;
+    text-align: center;
+  }
+  .announcement h2 {
+    max-width: 920px;
+    margin: 0 auto 32px auto;
+  }
+
+  footer {
+    background-color: var(--main);
+    padding: 60px 0;
+    color:white;
+  }
+</style>

@@ -1,0 +1,67 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main><slot /></main>
+  </body>
+</html>
+<style is:global>
+  :root {
+    --main: #4eb857;
+    --gray: #3b4042;
+  
+  }
+  html {
+    font-family: Roboto, sans-serif;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  main {
+    margin: auto;
+    color: black;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 0;
+    letter-spacing: 1.8px;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 0;
+  }
+</style>
