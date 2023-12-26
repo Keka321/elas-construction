@@ -2,7 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from 'astro:assets';
 import heroLogo from "../Images/heroLogo.svg";
-
 import Card from "../components/Card.astro";
 ---
 
@@ -24,17 +23,12 @@ import Card from "../components/Card.astro";
          Get to know our dedicated directors leading the way!
       </h2>
       <div class="grid">
-        <div class="card">
-          <h3>Nemanja</h3>
-        </div>
-        <div class="card">
-          <h3>Nemanja</h3>
-        </div>
-        <div class="card">
-          <h3>Nemanja</h3>
-        </div>
+      <Card name="Nemanja Vučić" job="Industrial" desc="Versatile and tailored sheet metal parts and products for industrial applications"></Card>
+      <Card name="Bojan Knežević" job="Kiosk" desc="Sports betting, Casino, Check-in, Pre-boarding, Finance and Retail"></Card>
+      <Card name="Boris Petrović" job="Railway" desc="Ceiling systems & Diverse Interior Components"></Card>
       </div>
-    </div>
+    
+
   </section>
 
   <footer>
@@ -72,6 +66,12 @@ import Card from "../components/Card.astro";
   .announcement h2 {
     max-width: 920px;
     margin: 0 auto 32px auto;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+
   }
 
   footer {
