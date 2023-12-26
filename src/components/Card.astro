@@ -3,13 +3,16 @@ interface Props {
 	name: string;
 	desc: string;
 	job: string;
+	image: string;
 }
 
-const { name, desc, job } = Astro.props;
+const { name, desc, job, image } = Astro.props;
 ---
 
 <div class="card">
-	<h4>{name}</h4>
+	<img src={image} alt={name} width="100%">
+	<div class="name-wrapper"><h4>{name}</h4></div>
+    
 	<h3>{job}</h3>
 	<div class="desc-wrapper">
 		<p>{desc}</p>
@@ -18,7 +21,7 @@ const { name, desc, job } = Astro.props;
 </div>
 <style>
 	.card {
-		list-style: none;
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -27,17 +30,22 @@ const { name, desc, job } = Astro.props;
 		border-radius: 30px;
 	}
 
-	.desc-wrapper {
-		background-color: #7F8589;
+	.card h3 {
+		text-transform: uppercase;
 	}
 
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+
+	.desc-wrapper {
+		background-color: #7F8589;
+		border-radius: 30px;
+		padding: 32px 12px;
+		color: white;
 	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
+
+	.name-wrapper {
+		background-color: #688392;
+		padding: 12px 32px;
 	}
+
+	
 </style>

@@ -23,12 +23,12 @@ import Card from "../components/Card.astro";
          Get to know our dedicated directors leading the way!
       </h2>
       <div class="grid">
-      <Card name="Nemanja Vučić" job="Industrial" desc="Versatile and tailored sheet metal parts and products for industrial applications"></Card>
-      <Card name="Bojan Knežević" job="Kiosk" desc="Sports betting, Casino, Check-in, Pre-boarding, Finance and Retail"></Card>
-      <Card name="Boris Petrović" job="Railway" desc="Ceiling systems & Diverse Interior Components"></Card>
+      <Card image="../../public/nemanja.png" name="Nemanja Vučić" job="Industrial" desc="Versatile and tailored sheet metal parts and products for industrial applications"></Card>
+      <Card image="../../public/bojan.png" name="Bojan Knežević" job="Kiosk" desc="Sports betting, Casino, Check-in, Pre-boarding, Finance and Retail"></Card>
+      <Card image="../../public/boris.png" name="Boris Petrović" job="Railway" desc="Ceiling systems & Diverse Interior Components"></Card>
       </div>
     
-
+</div>
   </section>
 
   <footer>
@@ -70,13 +70,17 @@ import Card from "../components/Card.astro";
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
     gap: 24px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
 
   }
 
   footer {
     background-color: var(--main);
-    padding: 60px 0;
+    padding: 60px 16px;
     color:white;
   }
 
