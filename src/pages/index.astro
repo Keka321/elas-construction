@@ -9,7 +9,7 @@ import Card from "../components/Card.astro";
   <section class="hero">
     <div class="container">
       <div class="h1-group">
-        <Image src={heroLogo} alt="logo" width=130 height=130></Image>
+        <Image src={heroLogo} alt="logo" width="130" height="130"></Image>
 
         <h1>Website under construction</h1>
       </div>
@@ -23,10 +23,13 @@ import Card from "../components/Card.astro";
          Get to know our dedicated directors leading the way!
       </h2>
       <div class="grid">
+        <!-- <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div> -->
       <Card image="../../public/nemanja.png" name="Nemanja Vučić" job="Industrial" desc="Versatile and tailored sheet metal parts and products for industrial applications"></Card>
       <Card image="../../public/bojan.png" name="Bojan Knežević" job="Kiosk" desc="Sports betting, Casino, Check-in, Pre-boarding, Finance and Retail"></Card>
       <Card image="../../public/boris.png" name="Boris Petrović" job="Railway" desc="Ceiling systems & Diverse Interior Components"></Card>
-      </div>
+      </div> 
     
 </div>
   </section>
@@ -43,6 +46,12 @@ import Card from "../components/Card.astro";
 </Layout>
 
 <style>
+.card {
+  height: 400px;
+  width: 300px;
+  background: #000;
+}
+
   .h1-group {
     display: flex;
     align-items: flex-start;
@@ -60,7 +69,7 @@ import Card from "../components/Card.astro";
     min-height: 600px;
   }
   .announcement {
-    padding: 60px 0 60px 0;
+    padding: 60px 16px 60px 16px;
     text-align: center;
   }
   .announcement h2 {
@@ -69,24 +78,35 @@ import Card from "../components/Card.astro";
   }
   .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-between;
-    gap: 24px;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    gap: 32px;
     width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
+
 
   }
 
   footer {
     background-color: var(--main);
-    padding: 60px 16px;
+    padding: 60px 0;
     color:white;
   }
 
-  @media only screen and (max-width:768px) {
+
+
+  @media only screen and (max-width:1105px) {
+    .grid { 
+      grid-template-columns: auto auto;
+    }
+   
+  } 
+   @media only screen and (max-width:768px) {
     .h1-group { 
       flex-direction: column;
+    }
+
+    .grid { 
+      grid-template-columns: auto;
     }
    
   }
