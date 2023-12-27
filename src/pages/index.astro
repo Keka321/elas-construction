@@ -26,9 +26,9 @@ import Card from "../components/Card.astro";
         <!-- <div class="card"></div>
         <div class="card"></div>
         <div class="card"></div> -->
-      <Card image="../../public/nemanja.png" name="Nemanja Vučić" job="Industrial" desc="Versatile and tailored sheet metal parts and products for industrial applications"></Card>
-      <Card image="../../public/bojan.png" name="Bojan Knežević" job="Kiosk" desc="Sports betting, Casino, Check-in, Pre-boarding, Finance and Retail"></Card>
-      <Card image="../../public/boris.png" name="Boris Petrović" job="Railway" desc="Ceiling systems & Diverse Interior Components"></Card>
+      <Card image="../../nemanja.png" name="Nemanja Vučić" job="Industrial" desc="Versatile and tailored sheet metal parts and products for industrial applications"></Card>
+      <Card image="../../bojan.png" name="Bojan Knežević" job="Kiosk" desc="Sports betting, Casino, Check-in, Pre-boarding, Finance and Retail"></Card>
+      <Card image="../../boris.png" name="Boris Petrović" job="Railway" desc="Ceiling systems & Diverse Interior Components"></Card>
       </div> 
     
 </div>
@@ -49,7 +49,7 @@ import Card from "../components/Card.astro";
 .card {
   height: 400px;
   width: 300px;
-  background: #000;
+  background: var(--dark);
 }
 
   .h1-group {
@@ -73,6 +73,7 @@ import Card from "../components/Card.astro";
     text-align: center;
   }
   .announcement h2 {
+    color: var(--urbanite);
     max-width: 920px;
     margin: 0 auto 32px auto;
   }

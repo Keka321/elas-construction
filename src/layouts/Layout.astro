@@ -29,7 +29,12 @@ const { title } = Astro.props;
 <style is:global>
   :root {
     --main: #4eb857;
-    --gray: #3b4042;
+    --dark: #000;
+    --reservedBlue:#D1D9DE;
+    --distantThunder:#7F8589;
+    --southPacific:#688392;
+    --urbanite:#4C555A;
+    
   
   }
   html {
@@ -73,13 +78,25 @@ const { title } = Astro.props;
     line-height: 1.2;
     margin: 0;
   }
+
+  h3 {
+    font-size: 35px;
+    font-weight: 500;
+  }
+
   h4 {
+    font-weight:400;
     font-size: 20px;
     line-height: 1.2;
   }
 
-  h1, h2, h3, h4, h5, h6 p {
-margin:0
+  h1, h2, h3, h4, h5, h6 {
+margin:0;
+}
+
+p {
+  font-weight: 400;
+margin:0;
 }
 
  

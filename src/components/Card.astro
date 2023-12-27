@@ -28,7 +28,7 @@ const { name, desc, job, image } = Astro.props;
 		flex-direction: column;
 		align-items: center;
 		padding: 24px 12px 12px 12px;
-		background-color: #D1D9DE;
+		background-color: var(--reservedBlue);
 		border-radius: 30px;
 		gap: 32px;
 	}
@@ -39,6 +39,7 @@ const { name, desc, job, image } = Astro.props;
 
 	.card h3 {
 		text-transform: uppercase;
+		color: var(--urbanite);
 	}
 
 
@@ -46,7 +47,7 @@ const { name, desc, job, image } = Astro.props;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;		
-		background-color: #7F8589;
+		background-color: var(--distantThunder);
 		border-radius: 30px;
 		color: white;
 		height: 194px;
@@ -56,7 +57,7 @@ const { name, desc, job, image } = Astro.props;
 	.name-wrapper {
 		max-width: 160px;
          width: 100%;
-		background-color: #688392;
+		background-color: var(--southPacific);
 		padding: 12px 32px;
 		color:white;
 		border-radius: 16px;
