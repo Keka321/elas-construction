@@ -25,9 +25,7 @@ import phone from "../Images/phone.svg";
          Get to know our dedicated directors leading the way!
       </h2>
       <div class="grid">
-        <!-- <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div> -->
+      
       <Card image="../../nemanja.png" name="Nemanja Vučić" job="Industrial" desc="Versatile and tailored sheet metal parts and products for industrial applications"></Card>
       <Card image="../../bojan.png" name="Bojan Knežević" job="Kiosk" desc="Sports betting, Casino, Check-in, Pre-boarding, Finance and Retail"></Card>
       <Card image="../../boris.png" name="Boris Petrović" job="Railway" desc="Ceiling systems & Diverse Interior Components"></Card>
@@ -78,11 +76,6 @@ import phone from "../Images/phone.svg";
 </Layout>
 
 <style>
-.card {
-  height: 400px;
-  width: 300px;
-  background: var(--dark);
-}
 
   .h1-group {
     display: flex;
@@ -172,5 +165,16 @@ import phone from "../Images/phone.svg";
     gap: 48px;
     justify-content: space-between;
   }
+  }
+  @media only screen and (max-width:478px) {
+    .hero {
+      min-height: auto;
+      padding-bottom: 160px;
+    }
+  }
+  @media only screen and (max-width:1190px) {
+    .hero {
+      background-position: 35%;
+    }
   }
 </style>
