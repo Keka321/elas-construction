@@ -39,29 +39,36 @@ import phone from "../Images/phone.svg";
   <footer>
     <div class="container">
       <div class="content-wrapper">
-        <div class="location-wrapper">
-            <h2>Location:</h2>
-      <p>Ramićka</p>
+        <div>
+            <h2 class="footer-heading">Location:</h2>
+            <div  class="location-wrapper">
+              <p>Ramićka</p>
       <p>Poslovna zona Banja Luka,</p>
       <p>78000 Banja Luka,BiH</p>
+    </div>
+      
         </div>
-     <div class="contact-wrapper">
-      <h2>Contact:</h2>
-      <div>
+     <div>
+      <h2 class="footer-heading">Contact:</h2>
+    
+      <div class="contact-wrapper"> 
+         <a href="tel:+38751378200">
         <Image src={phone} alt="phone"></Image>
               <p>Central: +387 51 378 200</p>
 
-      </div>
-      <div>
+      </a>
+      <a href="mailto:info@elas.ba">
         <Image src={mail} alt="mail"></Image>
               <p>info@elas.ba</p>
 
-      </div>
-      <div>
+      </a>
+      <a href="mailto:sales@elas.ba">
         <Image src={mail} alt="mail"></Image>
               <p>sales@elas.ba</p>
 
-      </div>
+      </a>
+    </div>
+      
      </div>
       
       </div>
@@ -125,6 +132,20 @@ import phone from "../Images/phone.svg";
     display: flex;
     flex-direction: column;
     gap: 48px;
+  }
+
+  .footer-heading {
+    font-weight:500;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .location-wrapper {
+    padding-left: 16px;
+  }
+  .contact-wrapper {
+    padding-left: 16px;
   }
 
 
