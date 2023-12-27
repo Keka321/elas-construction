@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from 'astro:assets';
 import heroLogo from "../Images/heroLogo.svg";
 import Card from "../components/Card.astro";
+import mail from "../Images/mail.svg";
+import phone from "../Images/phone.svg";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -36,11 +38,34 @@ import Card from "../components/Card.astro";
 
   <footer>
     <div class="container">
-      <h2>Location:</h2>
+      <div class="content-wrapper">
+        <div class="location-wrapper">
+            <h2>Location:</h2>
       <p>Ramićka</p>
-
+      <p>Poslovna zona Banja Luka,</p>
+      <p>78000 Banja Luka,BiH</p>
+        </div>
+     <div class="contact-wrapper">
       <h2>Contact:</h2>
-      <p>Central: asdasd</p>
+      <div>
+        <Image src={phone} alt="phone"></Image>
+              <p>Central: +387 51 378 200</p>
+
+      </div>
+      <div>
+        <Image src={mail} alt="mail"></Image>
+              <p>info@elas.ba</p>
+
+      </div>
+      <div>
+        <Image src={mail} alt="mail"></Image>
+              <p>sales@elas.ba</p>
+
+      </div>
+     </div>
+      
+      </div>
+      
     </div>
   </footer>
 </Layout>
@@ -89,8 +114,17 @@ import Card from "../components/Card.astro";
 
   footer {
     background-color: var(--main);
-    padding: 60px 0;
+    padding: 60px 16px;
     color:white;
+  }
+
+  footer .content-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
   }
 
 
@@ -110,5 +144,12 @@ import Card from "../components/Card.astro";
       grid-template-columns: auto;
     }
    
+  }
+  @media only screen and (min-width:768px) {
+    footer .content-wrapper {
+    flex-direction: row;
+    gap: 48px;
+    justify-content: space-between;
+  }
   }
 </style>
